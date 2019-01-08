@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F75C8F5A21E508D8008A780A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C8F5921E508D8008A780A /* AppDelegate.swift */; };
-		F75C8F5C21E508D8008A780A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C8F5B21E508D8008A780A /* ViewController.swift */; };
-		F75C8F5F21E508D8008A780A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75C8F5D21E508D8008A780A /* Main.storyboard */; };
 		F75C8F6121E508DB008A780A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75C8F6021E508DB008A780A /* Assets.xcassets */; };
 		F75C8F6421E508DB008A780A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75C8F6221E508DB008A780A /* LaunchScreen.storyboard */; };
+		F75C8F6C21E508F0008A780A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C8F6B21E508F0008A780A /* Post.swift */; };
+		F75C8F6E21E5090A008A780A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C8F6D21E5090A008A780A /* User.swift */; };
+		F75C8F7021E5093E008A780A /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C8F6F21E5093E008A780A /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F75C8F5621E508D8008A780A /* InstaProgrammatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaProgrammatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75C8F5921E508D8008A780A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F75C8F5B21E508D8008A780A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F75C8F5E21E508D8008A780A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F75C8F6021E508DB008A780A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75C8F6321E508DB008A780A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F75C8F6521E508DB008A780A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F75C8F6B21E508F0008A780A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F75C8F6D21E5090A008A780A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F75C8F6F21E5093E008A780A /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		F75C8F5821E508D8008A780A /* InstaProgrammatic */ = {
 			isa = PBXGroup;
 			children = (
+				F75C8F7521E50BD4008A780A /* Resources */,
+				F75C8F7421E50BC5008A780A /* Model */,
+				F75C8F7321E50BBC008A780A /* ModelController */,
+			);
+			path = InstaProgrammatic;
+			sourceTree = "<group>";
+		};
+		F75C8F7321E50BBC008A780A /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				F75C8F6F21E5093E008A780A /* PostController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		F75C8F7421E50BC5008A780A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F75C8F6B21E508F0008A780A /* Post.swift */,
+				F75C8F6D21E5090A008A780A /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F75C8F7521E50BD4008A780A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F75C8F5921E508D8008A780A /* AppDelegate.swift */,
-				F75C8F5B21E508D8008A780A /* ViewController.swift */,
-				F75C8F5D21E508D8008A780A /* Main.storyboard */,
 				F75C8F6021E508DB008A780A /* Assets.xcassets */,
 				F75C8F6221E508DB008A780A /* LaunchScreen.storyboard */,
 				F75C8F6521E508DB008A780A /* Info.plist */,
 			);
-			path = InstaProgrammatic;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +151,6 @@
 			files = (
 				F75C8F6421E508DB008A780A /* LaunchScreen.storyboard in Resources */,
 				F75C8F6121E508DB008A780A /* Assets.xcassets in Resources */,
-				F75C8F5F21E508D8008A780A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75C8F5C21E508D8008A780A /* ViewController.swift in Sources */,
+				F75C8F6E21E5090A008A780A /* User.swift in Sources */,
+				F75C8F6C21E508F0008A780A /* Post.swift in Sources */,
+				F75C8F7021E5093E008A780A /* PostController.swift in Sources */,
 				F75C8F5A21E508D8008A780A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F75C8F5D21E508D8008A780A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F75C8F5E21E508D8008A780A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F75C8F6221E508DB008A780A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
